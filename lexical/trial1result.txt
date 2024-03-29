@@ -1,0 +1,14 @@
+token				lexeme
+===========================
+Keyword			while
+Seperator			(
+Identifier			fahr
+Operator			<=
+Identifier			upper
+Seperator			)
+Identifier			a
+Operator			=
+real			23.00
+Identifier			val
+Operator			=
+digit			12

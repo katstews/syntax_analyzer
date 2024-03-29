@@ -1,0 +1,41 @@
+[* this is comment for this sample code which
+converts Fahrenheit into Celcius *]
+$
+function convertx* (fahr integer)
+{
+return 5 * (fahr -32) / .9;
+}
+$
+integer low, high, step; [* declarations *]
+$
+scan (low, high, step);
+scan123**++
+while (low <= high )
+{ print (low);
+print (convertx (low));
+low = low + step;
+}
+endwhile
+$
+$
+[* this function will say meow *]
+function meow (string val)
+{
+val = meow
+return print(val)
+}
+$
+string valueToPass123 [* declarations *]
+$
+scan (valueToPass123);
+$
+if (valueToPass123 == .123) {
+    return 0;
+}
+while (low <= high )
+{ print (low);
+print (convertx (low));
+low = low + step;
+}
+endwhile
+$ 
