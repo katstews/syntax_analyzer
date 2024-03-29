@@ -2,4 +2,4 @@
 assignment 2
 
 ## how to use
-> python3 sa.py <txt file> 
+` python3 sa.py <txt file> `
