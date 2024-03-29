@@ -2,4 +2,4 @@
 assignment 2
 
 ## how to use
-> hi
+> python3 sa.py <txt file> 
