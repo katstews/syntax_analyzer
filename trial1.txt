@@ -1,0 +1,14 @@
+$
+function printHi (printOrNo boolean)
+{
+    if (printOrNo == 1) {
+        return false;
+    }
+    endif
+    return true;
+}
+$
+real world, hello; [* declarations *]
+$
+print(hello);
+$

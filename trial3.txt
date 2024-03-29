@@ -1,0 +1,23 @@
+$
+function convertx (fahr integer)
+{
+if (fahr == 0)
+{
+    fahr = 15;
+}
+endif
+return 5 * (fahr -32);
+}
+$
+integer low, high, step; [* declarations *]
+real val1, val2;
+$
+scan (low, high, step);
+a = b + c;
+while (low <= high )
+{ print (low);
+print (convertx (low));
+low = low + step;
+}
+endwhile
+$

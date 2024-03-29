@@ -1,25 +1,27 @@
 import subprocess
 import sys
+import argparse 
 
 global token 
 global lexeme 
 global i  
 global display
 global z # var to just handle formatting to output file
+global lexervals
 
 ## this is the file, the file to pass into the lexer()
-filename = sys.argv[1]
+# filename = sys.argv[1]
 
-argument = filename 
+# argument = filename 
 
-subprocess.run(["python3", "la.py", argument])
+# subprocess.run(["python3", "la.py", argument])
 
-##grab the current lexer and token 
-## after passing it in the lexer()
-with open("result.txt", "r") as file1:
-    lexervals = []
-    for x in file1:
-        lexervals.append(x.strip().split())
+# ##grab the current lexer and token 
+# ## after passing it in the lexer()
+# with open("result.txt", "r") as file1:
+#     lexervals = []
+#     for x in file1:
+#         lexervals.append(x.strip().split())
 
 ## update the token and lexeme values 
 ## this will do the incremementing too 
@@ -896,21 +898,45 @@ def main():
     global i 
     global display 
     global z
+    global lexervals
     
     i = 0
     z = 0 
     
+    description = '''
+    python3 sa.py <file to parse>
+    '''
+    parser = argparse.ArgumentParser(description=description)
+   
+    parser.add_argument('<txt file>', help='a file that contains the text you to tokenize, such as a txt')
+    args = parser.parse_args()
+    
+    filename = sys.argv[1]
+
+    argument = filename 
+
+    subprocess.run(["python3", "la.py", argument])
+
+    ##grab the current lexer and token 
+    ## after passing it in the lexer()
+    with open("result.txt", "r") as file1:
+        lexervals = []
+        for x in file1:
+            lexervals.append(x.strip().split())
+    
     print("\n")
     
-    display_input = input("Enter 0 for no printing, 1 for printing: ")
+    display_input = input("Enter 0 for no printing on screen, 1 for printing on screen: ")
     
     if display_input == '0':
         display = False
     else:
         display = True 
     
-    with open("sa_results.txt", "w") as file: 
+    with open("sa_results" + filename , "w") as file: 
         lexer()
         Rat24s(file)
+    print("\n=====================================================")    
+    print("Syntax Anazlyer done! Results saved in sa_results" + filename )
 
 main()
