@@ -1,5 +1,5 @@
 # syntax_analyzer
-assignment 2
+Assignment 2
 
-## how to use
+## How to use
 ` python3 sa.py <txt file> `
